@@ -772,7 +772,7 @@ const data={
   "users":[
     {
       "username":"admin",
-      "password":"admin"
+      "password":"admin@123"
     },
     {
       "username":"developersah",
