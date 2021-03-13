@@ -11,7 +11,7 @@ admin
 </pre>
 <h4>Password</h4>
 <pre>
-admin
+admin@123
 </pre>
 <img src="https://raw.githubusercontent.com/RahulSahOfficial/bollydb/main/preview/login.png" alt="img">
 <h3>Movies Page</h3>
