@@ -1,0 +1,992 @@
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+a{
+    color: grey;
+    text-decoration: none;
+}
+body
+{
+	width: 100%;
+	min-height: 100vh;
+}
+
+
+/* Navbar */
+.logo
+{
+    font-weight: 500;
+    margin: 0 0.5rem;
+    color: #f3f3f3;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+.logo span
+{
+    background: #ffc107;
+    padding: 0.3rem;
+    border-radius: 0.6rem;
+    color: white;
+    margin: 0 0.2rem;
+    font-weight: 500;
+    font-size: 1.4rem;
+    vertical-align: revert;
+}
+.error
+{
+    font-size: 0.9rem;
+    text-align: left;
+    color: #f44336;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+nav
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #505050;
+    padding: 1rem 10rem;
+}
+.searchbox
+{
+    width: 50%;
+    position: relative;
+}
+.searchbox i
+{
+    position: absolute;
+    color: #A5A3AD;
+    font-size: 1rem;
+    top: 0.5rem;
+    left: 1rem;
+}
+.searchbox input
+{
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
+    border-radius: 0.1rem;
+    border: none;
+    outline: none;
+    width: 95%;
+    margin: 0 0.5rem;
+}
+.buttonbox
+{
+    display: flex;
+    align-items: center;
+}
+.buttonbox button
+{
+    padding: 0.5rem;
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    margin: 0 0.5rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.buttonbox button i
+{
+    font-size: 1.1rem;
+    margin-right: 0.3rem;
+}
+.sec-btn
+{
+    background: none;
+    color: #f1f1f1;
+}
+
+
+
+/* Top links */
+.toplinks
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.9rem 6rem;
+    box-shadow: 0px 1px 2px #86868699;
+}
+.toplinks a
+{
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0 0.5rem;
+    white-space: nowrap;
+}
+
+
+/* Mainarea */
+.mainarea
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 4rem 0;
+    background: url("../images/bg2.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.mainarea h2
+{
+    color: #2196f3;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    margin-bottom: 2rem;
+}
+.formbox
+{
+    margin: 2rem 0;
+    padding: 2rem;
+    background: white;
+    text-align: center;
+    box-shadow: 4px 4px 10px 5px #0e0e0e5c;
+    border-radius: 0.4rem;
+}
+.formbox a
+{
+    color: #9e9e9e;
+}
+.eachinput
+{
+    position: relative;
+}
+.eachinput i
+{
+    position: absolute;
+    top: 1rem;
+    left: 0.8rem;
+    font-size: 1.2rem;
+    color: grey;
+}
+.eachinput input
+{
+    width: 25rem;
+    padding: 0.5rem 0.5rem 0.5rem 2.5rem;
+    border-radius: 0.2rem;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    background: #ececec;
+    margin: 0.5rem 0;
+    color: #4c4b4b;
+}
+.formbox form button
+{
+    background: #2196f3;
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    font-size: 1.3rem;
+    color: white;
+    margin: 1rem 0;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+.formbox form button:hover{
+    background: #03a9f4;
+}
+.eachsignin
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    background: #f3f3f3;
+    padding: 0.2rem;
+    margin: 0.7rem auto;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+.signinwith
+{
+    margin-bottom: 1rem;
+}
+.eachsignin img
+{
+    width: 1.5rem;
+    margin-right: 0.5rem;
+}
+.eachsignin p
+{
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #292929;
+}
+
+/* Moviebox */
+.moviearea
+{
+    padding: 5rem 2rem;
+    background: #232323;
+}
+.moviebox
+{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.eachmovie
+{
+    position: relative;
+    background: #3c3c3c;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: inline-flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+    opacity: 0;
+    transform: translateY(50px);
+}
+.animate
+{
+    opacity: 1;
+    transform: none;
+}
+.eachmovie:hover
+{
+    transform:scale(1.02)
+}
+.eachmovie .info
+{
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    color: #ffffffd6;
+    background: #0000004f;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+}
+.eachmovie img
+{
+    width: 15rem;
+    height: 22rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+.eachmovie .desc
+{
+    color: white;
+    margin: 1rem 0 0;
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+}
+.desc h3
+{
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    height: 4rem;
+    overflow: hidden;
+}
+.desc .overview
+{
+    color: #c7c6c6;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    height: 2.5rem;
+    overflow: hidden;
+}
+.desc .ratingrelease
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.ratingrelease .rating
+{
+    font-size: 1.2rem;
+}
+.rating i
+{
+    color: #ffc107;
+}
+.ratingrelease .release
+{
+    color: #eaeaea;
+    font-weight: 300;
+}
+.sitemap
+{
+    background: #333333;
+    padding: 3rem 5rem;
+    display: flex;
+    flex-direction: column;
+}
+.sitemap>div
+{
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+.sitemap .topline
+{
+    margin-bottom: 3rem;
+}
+.linkbox .eachcol
+{
+    display: flex;
+    flex-direction: column;
+    margin-right: 2rem;
+    flex: 1;
+}
+.linkbox .category
+{
+    flex:2;
+}
+.linkbox .category .links
+{
+    flex-direction: row!important;
+}
+.linkbox .category .links div
+{
+    display: flex;
+    flex-direction: column;
+}
+.linkbox .category .links .col1{
+    margin-right: 7rem;
+}
+.linkbox .eachcol h5
+{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.linkbox .eachcol .links
+{
+    display: flex;
+    flex-direction: column;
+}
+.linkbox .eachcol .links a
+{
+    color: #e0e0e0;
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+}
+.sitemap .bottomline
+{
+    align-items: center;
+    margin-bottom: 0;
+}
+.bottomline>div
+{
+    flex: 1;
+    display: flex;
+    justify-content: space-evenly;
+}
+.newsletterbox
+{
+    flex-direction: column;
+    color: #e8e8e8;
+    align-items: baseline;
+}
+.newsletterbox p
+{
+    margin-bottom: 0.5rem;
+}
+.newsletterbox p i
+{
+    font-size: 1.4rem;
+    margin-right: 0.5rem;
+}
+.newsletterbox .newsform
+{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+.newsletterbox .newsform input
+{
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    width: calc(100% - 120px);
+    border-radius: 0.4rem;
+    outline: none;
+}
+.newsletterbox .newsform button
+{
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    background: #2196f3;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 0.4rem;
+    width: 7rem;
+    cursor: pointer;
+}
+.bottomline .apps
+{
+    justify-content: center;
+}
+.apps button
+{
+    padding: 0.7rem 1.5rem;
+    margin: 0.5rem;
+    outline: none;
+    border: none;
+    font-size: 1.1rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    color: #252525;
+    background: white;
+}
+.apps .android
+{
+    background: none;
+    border: 1px solid white;
+    color: white;
+}
+.apps button i{
+    margin-right: 0.3rem;
+    font-size: 1.3rem;
+}
+footer
+{
+    background: #231F20;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 300;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 15rem;
+}
+footer p
+{
+    cursor: pointer;
+    font-weight: 400;
+}
+footer .fa-stack
+{
+    transform: scale(0.9);
+    transition: 0.4s ease-in;
+}
+footer .fa-stack-2x
+{
+    color: #f9f9f9;
+    transition: 0.4s ease-in;
+}
+footer .fa-stack-1x
+{
+    color: #020202;
+    font-size: 1.2rem;
+    transform: translateY(1px);
+    transition: 0.2s ease-in;
+}
+footer .fa-stack:hover
+{
+    transform: scale(1.1);
+}
+.fa-stack:hover , .fa-stack:hover .fa-stack-1x
+{
+    color:white;
+}
+.ig:hover , .ig:hover .fa-circle
+{
+    color:#e91e63;
+}
+.fb:hover , .fb:hover .fa-circle
+{
+    color:#3f51b5;
+}
+.yt:hover , .yt:hover .fa-circle
+{
+    color:#f44336;
+}
+.tw:hover , .tw:hover .fa-circle
+{
+    color:#2196f3;
+}
+.mainmoviebox
+{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #50505059;
+    height: 100vh;
+    width: 100%;
+    padding: 5rem;
+    backdrop-filter: blur(3px);
+    z-index: 1;
+    transition: 0.4s ease-in;
+    transform: translateY(1000px);
+    opacity: 0;
+}
+.mdesc::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+   
+.mdesc::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgb(0 0 0);
+  }
+   
+.mdesc::-webkit-scrollbar-thumb {
+    background-color: #03a9f4;
+    outline: 1px solid #00bcd4;
+    border-radius: 1rem;
+  }
+.mainmoviebox .mainmovie
+{
+    display: flex;
+    background: #ffffff;
+    position: relative;
+}
+.mainmovie .close
+{
+    position: absolute;
+    right: 1rem;
+    top: 0rem;
+    font-size: 2rem;
+    color: #797979;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+.mainmovie .mimg
+{
+    height: calc(100vh - 131px);
+}
+.mainmovie .mdesc
+{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 3rem 2rem 2rem;
+    height: calc(100vh - 131px);
+    white-space: nowrap;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+.mainmovie .actorsdiv
+{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.actorsdiv .eachactor
+{
+    display: flex;
+    padding: 0.5rem;
+    align-items: center;
+    margin: 0.5rem;
+    background: #f5f5f5;
+    border-radius: 0.3rem;
+    width: 15rem;
+}
+.eachactor img
+{
+    height: 4rem;
+    width: 3rem;
+    border-radius: 0.5rem;
+    margin-right: 0.5rem;
+}
+.actordesc .name
+{
+    white-space: nowrap;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.actordesc .role
+{
+    font-size: 0.9rem;
+    color: #272727;
+    font-weight: 400;
+}
+.mainmovie .heading
+{
+    font-size: 1.3rem;
+    color: #2196f3;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #bbbbbb;
+    padding: 0.2rem 0;
+    letter-spacing: 0.8px;
+}
+.mainmovie .moverview
+{
+    color: #565656;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    font-size: 1rem;
+    white-space: normal;
+}
+.mainmovie .mtitle
+{
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #2196f3;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    white-space:normal;
+}
+.mainmovie .moviedata
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.mainmovie .eachdata p
+{
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #2f2f2f;
+    text-transform:capitalize;
+}
+.mainmovie .eachdata p i{
+    color: #ffc107;
+    font-size: 1.5rem;
+    vertical-align: bottom;
+    padding: 0 0.3rem;
+}
+.mainmovie .ratingbox
+{
+    padding: 1rem;
+    border: 2px solid #b3b2b2;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+}
+.ratingbox .starform
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.ratingbox .starform button
+{
+    padding: 0.5rem;
+    width: 7rem;
+    border: none;
+    outline: none;
+    background: #2196f3;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 0.3rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.ratingbox .starform button:hover
+{
+    background: #51b2ff;
+    transform: scale(1.05);
+}
+.ratingbox .starbox
+{
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    color: #ffeb3b;
+}
+.starbox i
+{
+    margin: 0 0.5rem;
+    cursor: pointer;
+}
+.mainmovie .usercomment
+{
+    padding: 1rem;
+    border: 2px solid #b3b2b2;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+}
+.usercomment p
+{
+    margin-bottom: 0.5rem;
+    color: grey;
+    font-size: 1.1rem;
+}
+.commentform
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.commentform input
+{
+    flex: 4;
+    padding: 0.5rem;
+    border: 1px solid #9c9494;
+    border-radius: 0.3rem;
+    margin-right: 1rem;
+    outline: 0;
+}
+.commentform button
+{
+    flex: 1;
+    background: #2196f3;
+    color: white;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    outline: 0;
+    border: 0;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+.comments{
+    display:flex;
+    flex-flow:wrap;
+    align-items: center;
+}
+.comments .eachcomment
+{
+    display: inline-flex;
+    flex-direction: column;
+    margin: 0.5rem;
+    background: #e4e4e4;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    width: 24rem;
+}
+.eachcomment .commentusername
+{
+    margin-bottom: 0.7rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #3a3838;
+}
+.eachcomment .comment{
+    white-space: normal;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #6d6d6d;
+    margin-bottom: 1rem;
+}
+.eachcomment .interactionbutton{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #6b6b6b;
+    font-size: 1.1rem;
+}
+.interactionbutton i
+{
+    cursor: pointer;
+}
+.interactionbutton .fa.active
+{
+    color: #2196f3;;
+}
+@media only screen and (max-width: 1200px){
+    nav{
+        padding: 1rem 5rem;
+    }
+    .toplinks
+    {
+        padding: 0.9rem 1rem;
+    }
+    .toplinks a
+    {
+        font-size: 0.8rem;
+        margin: 0 0.3rem;
+    }
+    .mainmovie .mdesc
+    {
+        padding: 1rem 2rem 1rem 1rem;
+    }
+}
+@media only screen and (max-width: 1000px){
+    nav
+    {
+        flex-direction: column;
+    }
+    nav .searchbox
+    {
+        margin: 1rem 0;
+    }
+    .bottomline .apps
+    {
+        flex-direction: column;
+    }
+    .sitemap
+    {
+        padding: 3rem 2rem;
+    }
+    footer
+    {
+        padding: 0.5rem 2rem;
+    }
+    .toplinks
+    {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .toplinks a
+    {
+        margin: 0.3rem;
+    }
+    .eachmovie img {
+        width: 13rem;
+        height: 18rem;
+    }
+    .eachmovie .desc
+    {
+        width: 13rem;
+    }
+    .mainmovie .mimg
+    {
+        width: 35%;
+    }
+    .mainmovie .actorsdiv
+    {
+        justify-content: center;
+    }
+}
+@media only screen and (max-width: 800px){
+    .signinbox
+    {
+        width: 100%;
+        margin: 0;
+        align-items: center;
+    }
+    nav .searchbox
+    {
+        width: 100%;
+    }
+    .moviearea {
+        padding: 5rem 0.5rem;
+    }
+    .eachmovie
+    {
+        margin: 0.5rem;
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    }
+    .eachmovie img {
+        width: 10rem;
+        height: 14rem;
+    }
+    .eachmovie .desc
+    {
+        width: 10rem;
+    }
+    .desc h3 {
+        font-size: 1rem;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+        height: 2.5rem;
+    }
+    .ratingrelease .release
+    {
+        font-size: 0.8rem;
+    }
+    .desc .overview {
+        font-size: 0.8rem;
+        height: 2rem;
+    }
+    .ratingrelease .rating {
+        font-size: 1.1rem;
+    }
+    .mainmovie .mimg {
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+        height: calc(100vh - 131px);
+    }
+    .mainmovie .mdesc
+    {   
+    z-index: 2;
+    backdrop-filter: brightness(0.2) blur(2px);
+    padding: 2rem 3rem 2rem 2rem;
+    }
+    .comments
+    {
+        justify-content: center;
+    }
+    .mainmovie .close
+    {
+        color: #c7c7c7;
+    z-index: 3;
+    }
+    .mainmovie .moverview {
+        color: #d4d4d4;
+    }
+    .mainmovie .eachdata p {
+        color: #d2d2d2;
+    }
+}
+@media only screen and (max-width: 500px){
+    nav{
+        padding: 1rem;
+    }
+    .formbox
+    {
+        width: 90%;
+        margin: 2rem auto;
+        padding: 2rem 1rem;
+    }
+    .sitemap>div
+    {
+        flex-direction: column;
+    }
+    .linkbox .eachcol
+    {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    .sitemap {
+    padding: 3rem 1rem;
+    }
+    .newsletterbox
+    {
+        margin-bottom: 1rem;
+    }
+    .newsletterbox .newsform,.eachsignin,.bottomline>div,nav .searchbox,.eachinput input
+    {
+        width: 100%;
+    }
+    footer {
+        padding: 0.5rem 1rem;
+        flex-direction: column;
+    }
+    footer p
+    {
+        margin-bottom: 0.7rem;
+    }
+    .eachmovie img {
+        width: 15rem;
+        height: 19rem;
+    }
+    .eachmovie .desc
+    {
+        width: 15rem;
+    }
+    .mainmoviebox
+    {
+        padding: 1rem;
+    }
+    .mainmovie .mdesc,.mainmovie .mimg
+    {
+        height: calc(100vh - 30px);
+    }
+    .mainmovie .mdesc
+    {
+        padding: 1rem 2rem 1rem 1rem;
+    }
+    .ratingbox .starform
+    {
+        flex-direction: column;
+    }
+}
